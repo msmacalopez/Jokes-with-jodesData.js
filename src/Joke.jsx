@@ -28,8 +28,13 @@ const Joke = (props) => {
       {/* //conditional renderin with button  */}
       {isShown && <p className="punchline">Punch line: {props.punchline}</p>}
 
+      {/* Using Ternary  */}
+      {isShown ? (
+        <p className="punchline">Punch line: {props.punchline}</p>
+      ) : null}
+
       {/* //Add button  */}
-      <button onClick={showPunchline}>Show Punch</button>
+      <button onClick={showPunchline}>{isShown ? "Hide" : "Show"} Punch</button>
 
       <p className="upvotes"> UpVotes: {props.upvotes}</p>
       <p className="ispun"> IsPun: {props.ispun}</p>
